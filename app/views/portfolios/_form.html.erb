@@ -1,0 +1,75 @@
+<!--
+<%= form_for(portfolio_item) do |form| %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+    <div class="field">
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <ul>
+    <%= form.fields_for :technologies do |technology_form| %>
+    <li><%= technology_form.label :name %></li>
+    <li><%= technology_form.text_field :name %></li>
+    <% end %>
+  </ul>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+-->
+
+<div class="container">
+<%= form_for(portfolio_item) do |form| %>
+
+<div class="card bg-light text-center card-form">
+   <div class="card-body">
+     <form>
+      <div class="form-group field">
+      <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control form-control-lg" %>
+      </div>
+
+    <div class="field form-group">
+     <%= form.label :subtitle %>
+        <%= form.text_field :subtitle ,class: "form-control form-control-lg "%>
+  </div>
+
+  <div class="field">
+     <%= form.label :body %>
+    <%= form.text_area :body,cols: "10", rows: "10", class: "form-control form-control-lg"%>
+  </div>
+
+    <h3 class="my-3" >Technology used</h3>
+
+    <%= form.fields_for :technologies do |technology_form| %>
+
+      
+  <div class="form-group field">
+            <%= technology_form.text_field :name ,class: "form-control form-control-lg" %>
+          </div>
+    <% end %>
+  </ul>
+
+   <div class="actions text-right">
+               <%= form.submit  class: "btn rounded-pill btn-success  btn-block w-25 mx-auto btn-outline-dark" %>
+   </div>
+   </form>
+</div>
+<div>
+
+<% end %>
+
+</div>
+
+</div>

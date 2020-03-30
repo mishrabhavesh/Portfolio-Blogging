@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card">
+  <div class="card-header">
+     <%= @blog.title %>
+  </div>
+  <div class="card-body">
+    <div class="card-text">
+      <%= @blog.body %>
+    </div>
+    <div class="card-footer text-center">
+      <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-info mr-3 px-5" %> 
+      <%= link_to 'Back', blogs_path , class: "btn btn-dark px-5"%>
+    </div>
+  </div>
+</div>
+<!--
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @blog.body %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
+-->

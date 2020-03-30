@@ -1,0 +1,10 @@
+ <div class="col-md-8 blog-main">
+ <div class="text-center">
+    <h3 class="card-header mb-2 ">Edit blog</h3>
+ </div>
+<%= render 'form', blog: @blog %>
+<div class="text-center mt-3">
+    <%= link_to 'Show', @blog, class: 'btn btn-info mr-3 mb-3' %>
+    <%= link_to 'Back', blogs_path, class: 'btn btn-dark mb-3' %>
+</div>
+</div>

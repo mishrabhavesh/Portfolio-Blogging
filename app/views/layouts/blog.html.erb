@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title%></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <!--nav bar start-->
+     <div class="container">
+      <%= render 'shared/blog_nav' %>
+    </div>
+
+    <!--nav bar end-->
+<main role="main" class="container">
+  <div class="row">
+    <!--body bar start-->
+
+     
+      
+    <%= yield %>
+    
+<!--footer start-->
+  <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light card-body bg-light rounded">
+        <h4 class="font-italic card-title">About</h4>
+        <p class="mb-0 card-text">This is a blogging page where you can post your blogs and connect with other. This website has been designed by Bhavesh Mishra</p>
+      </div>
+
+
+      <div class="p-4">
+        <h4 class="font-italic">Elsewhere</h4>
+        <ol class="list-unstyled">
+          <li class="py-2"><a href="https://github.com/mishrabhavesh/Portfolio-Blogging"><%=fa_icon "github 2x" %></a></li>
+           <li class="py-2"><a href="twitter.com"><%=fa_icon "twitter 2x" %></a></li>
+           <li class="py-2"><a href="https://www.facebook.com/bhavesh.08081997?ref=bookmarks"><%=fa_icon "facebook 2x" %></a></li>
+            <li class="py-2"><a href="https://www.instagram.com/bhavesh_rummy/"><%=fa_icon "instagram 2x" %></a></li>
+
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->
+    <%= source_helper %>
+     <footer class="mastfoot mt-auto">
+      <div class="inner text-center">
+      <p>&copy; | 2020 Bhavesh Mishra   All rights reserved </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!--<tr>
+        <td><%= blog.title %></td>
+        <td>Published <%= time_ago_in_words(blog.created_at) %></td>
+        <td><%= blog.body %></td>
+         <td> <%= link_to  blog.status,toggle_status_blog_path(blog) %> </td>
+        <td><%= link_to 'Show', blog %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+-->
+<div class="card mt-3">
+  <div class="card-body">
+    <div class="card-header h3">
+      <%= blog.title  %> <br>
+      <small class="h6">Published <%= time_ago_in_words(blog.created_at) %></small>
+    </div>
+    <div class="card-text">
+      <%= blog.body %>
+    </div>
+
+    <div class="card-footer text-center">
+        <%= link_to  blog.status,toggle_status_blog_path(blog), class: "btn btn-primary mr-3" %>
+        <%= link_to 'Show', blog, class: "btn btn-info mr-3"%>
+        <%= link_to 'Edit', edit_blog_path(blog) ,class: "btn btn-info mr-3"%>
+        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger mr-3"%>
+    </div>
+  </div>
+</div>
