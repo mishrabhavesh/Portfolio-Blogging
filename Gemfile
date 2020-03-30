@@ -53,3 +53,4 @@ gem 'will_paginate', '~> 3.3'
 gem 'gritter', '~> 1.2'
 gem 'webpacker', '~> 5.0', '>= 5.0.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
+gem ruby "2.6.5"
